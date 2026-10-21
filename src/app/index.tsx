@@ -1,6 +1,5 @@
 
-
-import { ScrollView, StyleSheet, View, Pressable } from 'react-native';
+import { ScrollView, StyleSheet, View, Pressable, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 
@@ -48,14 +47,27 @@ export default function HomeScreen() {
             style={styles.primaryButton}
             onPress={() => router.push('/sobre')}
           >
-            <Text style={styles.primaryButtonText}>Conheça meu perfil  →</Text>
+            <Text style={styles.primaryButtonText}>
+              Conheça meu perfil →
+            </Text>
           </Pressable>
 
           <Pressable
             style={styles.secondaryButton}
             onPress={() => router.push('/projetos')}
           >
-            <Text style={styles.secondaryButtonText}>Ver meus projetos</Text>
+            <Text style={styles.secondaryButtonText}>
+              Ver meus projetos
+            </Text>
+          </Pressable>
+
+          <Pressable
+            style={styles.databaseButton}
+            onPress={() => router.push('/pessoas')}
+          >
+            <Text style={styles.databaseButtonText}>
+              Ver pessoas cadastradas
+            </Text>
           </Pressable>
         </View>
 
@@ -70,13 +82,13 @@ export default function HomeScreen() {
           </Text>
         </View>
 
-        <Text style={styles.footer}>Construindo meu caminho na tecnologia ✦</Text>
+        <Text style={styles.footer}>
+          Construindo meu caminho na tecnologia ✦
+        </Text>
       </ScrollView>
     </SafeAreaView>
   );
 }
-
-import { Text } from 'react-native';
 
 const styles = StyleSheet.create({
   safeArea: {
@@ -178,8 +190,22 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 14,
     borderRadius: 14,
+    marginBottom: 12,
   },
   secondaryButtonText: {
+    color: COLORS.text,
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  databaseButton: {
+    backgroundColor: COLORS.pinkLight,
+    paddingHorizontal: 20,
+    paddingVertical: 14,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: COLORS.pink,
+  },
+  databaseButtonText: {
     color: COLORS.text,
     fontSize: 14,
     fontWeight: '700',

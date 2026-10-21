@@ -61,6 +61,14 @@ export default function AppTabsWeb() {
         >
           <Text style={styles.tabText}>Projetos</Text>
         </TabTrigger>
+
+        <TabTrigger
+          name="pessoas"
+          href="/pessoas"
+          style={styles.tab}
+        >
+          <Text style={styles.tabText}>Pessoas cadastradas</Text>
+        </TabTrigger>
       </TabList>
 
       <TabSlot />

@@ -34,6 +34,10 @@ export default function AppTabs() {
       <NativeTabs.Trigger name="projetos">
         <NativeTabs.Trigger.Label>Projetos</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
+
+      <NativeTabs.Trigger name="pessoas">
+        <NativeTabs.Trigger.Label>Pessoas</NativeTabs.Trigger.Label>
+      </NativeTabs.Trigger>
     </NativeTabs>
   );
 }
